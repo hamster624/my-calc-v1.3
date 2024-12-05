@@ -1,0 +1,175 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1c2833;
+  color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100vh;
+  padding: 10px;
+  overflow: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.light-theme {
+  background-color: #ffffff;
+  color: #2c3e50;
+}
+
+/* Container */
+.container {
+  background-color: #34495e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  inline-size: 100%;
+  max-inline-size: 480px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-theme .container {
+  background-color: #ecf0f1;
+}
+
+/* Title */
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-block-end: 30px;
+  color: #ecf0f1;
+}
+
+body.light-theme .title {
+  color: #2c3e50;
+}
+
+/* Input Group */
+.input-group {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  inline-size: 100%;
+  max-inline-size: 250px;
+  position: relative;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: inherit;
+  margin-block-end: 5px;
+  transition: color 0.4s ease;
+}
+
+body.light-theme .input-group label {
+  color: #2c3e50;
+}
+
+input[type="number"] {
+  inline-size: 100%;
+  padding: 25px 30px;
+  font-size: 22px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #3b4d61, #2c3e50);
+  color: #ecf0f1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 
+              inset 2px 2px 5px rgba(0, 0, 0, 0.4), 
+              inset -2px -2px 5px rgba(255, 255, 255, 0.05);
+  transition: all 0.5s ease;
+  block-size: 50px; /* Increased input height */
+}
+
+body.light-theme input[type="number"] {
+  background: linear-gradient(145deg, #ffffff, #dfe6e9);
+  color: #2c3e50;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+              inset -2px -2px 5px rgba(255, 255, 255, 0.9),
+              4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #3498db;
+  background: linear-gradient(145deg, #425870, #34495e);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.5), 
+              inset 2px 2px 5px rgba(0, 0, 0, 0.4), 
+              inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.light-theme input[type="number"]:focus {
+  background: linear-gradient(145deg, #ecf0f1, #dfe6e9);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2), 
+              inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+              inset -2px -2px 5px rgba(255, 255, 255, 0.9);
+}
+
+/* Button Group */
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #2980b9;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  background-color: #1e6f8e;
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Result Area */
+.result h2 {
+  font-size: 28px;
+  margin-block-end: 10px;
+}
+
+.result p {
+  font-size: 20px; /* Reduced height */
+  color: #3498db;
+  font-weight: bold;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  inline-size: 100%;
+  max-inline-size: 400px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 auto;
+  white-space: pre-wrap;
+}
+
+/* Adjusted Result Width */
+.result p {
+  inline-size: 80%;  /* Adjust this value as needed */
+  margin: 0 auto;
+}
